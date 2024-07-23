@@ -35,15 +35,7 @@ const OTPCode = (props) => {
     setError,
   } = useForm();
   const onSubmit = async (data) => {
-navigation.navigate('UserName')
-    return
-    setLoading(true)
-    const dataToSend = {
-      numberId: number?.numberId,
-      code: data?.code
-    }
-    // const res = await verifyNumber(dataToSend, setLoading)
-    setLoading(false)
+    navigation.navigate('UserName')
   }
   useEffect(() => {
     const interval = setInterval(() => {
@@ -65,8 +57,8 @@ navigation.navigate('UserName')
     <Wrapper>
 
       <View style={styles.container}>
-          <CustomHeader  />
-          <TextHuge bold textStyle={{ marginTop: heightPercentageToDP(2),marginBottom:heightPercentageToDP(6) }}>{"Enter Your Code to \n Jump into the Action"}</TextHuge>
+        <CustomHeader />
+        <TextHuge bold textStyle={{ marginTop: heightPercentageToDP(2), marginBottom: heightPercentageToDP(6) }}>{"Enter Your Code to \n Jump into the Action"}</TextHuge>
 
 
         <View >
@@ -82,18 +74,18 @@ navigation.navigate('UserName')
         </View>
 
         <View>
-          <View style={{ 
+          <View style={{
             // flexDirection: 'row',
             // backgroundColor:'yellow',
-            alignItems:'center',
+            alignItems: 'center',
             marginVertical: heightPercentageToDP(2)
             //  justifyContent: 'center' 
-             }}>
+          }}>
             <TextNormal color={COLORS.white}>{"Didn't receive an SMS code?"}</TextNormal>
             <Pressable
               onPress={resendCode}
             >
-              <TextNormal bold color={COLORS.white} textStyle={{marginTop:heightPercentageToDP(1)}}>Resend</TextNormal>
+              <TextNormal bold color={COLORS.white} textStyle={{ marginTop: heightPercentageToDP(1) }}>Resend</TextNormal>
             </Pressable>
           </View>
         </View>

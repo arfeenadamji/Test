@@ -1,11 +1,6 @@
-import {Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {COLORS} from '../../utils/constants/theme';
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
-import {RFValue} from 'react-native-responsive-fontsize';
+import { StyleSheet, Text } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
 
 export const TextNormal = props => {
   const {children, textStyle, color, center, bold, medium, semiBold, ...rest} =
@@ -122,51 +117,28 @@ export const TextHuge = props => {
   );
 };
 
-// fontFamily:'Inter-Black'
-// fontFamily:'Inter-Bold'
-// fontFamily:'Inter-ExtraBold'
-// fontFamily:'Inter-ExtraLight'
-// fontFamily:'Inter-Light'
-// fontFamily:'Inter-Medium'
-// fontFamily:'Inter-Regular'
-// fontFamily:'Inter-SemiBold'
-// fontFamily:'Inter-Thin'
 
 const styles = StyleSheet.create({
   text: {
-    // color: COLORS.text,
     color: 'white',
-    // backgroundColor:'red',
-    // fontFamily:'Poppins Bold',
-    // fontFamily: 'Poppins-Medium',
   },
   smaller: {
-    // fontSize: wp(3),
-    // fontSize: RFValue(11),
     fontSize: RFValue(11),
   },
   small: {
-    // fontSize: wp(3.5),
-    // fontSize: RFValue(12),
     fontSize: RFValue(13),
   },
   normal: {
-    // fontSize: wp(4),
-    // fontSize: RFValue(14)
     fontSize: RFValue(15),
   },
 
   big: {
-    // fontSize: wp(5),
     fontSize: RFValue(18),
-    // fontFamily: Platform.OS == 'android' ? 'baskerville bold bt' : 'Baskerville Bold',
   },
   bigger: {
-    // fontSize: wp(5.5),
     fontSize: RFValue(20),
   },
   huge: {
-    // fontSize: wp(6),
     fontSize: RFValue(21),
   },
 });

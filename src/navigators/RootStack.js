@@ -4,8 +4,8 @@ import DashboardStack from './DashBoardStack';
 
 const RootStack = () => {
   // user can be get from redux
-const user1= false
-  if (user1) {
+const user= false
+  if (user) {
     return <DashboardStack />;
   } else {
     return <AuthStack />;

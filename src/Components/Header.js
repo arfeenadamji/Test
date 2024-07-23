@@ -8,26 +8,12 @@ import {
 } from 'react-native-responsive-screen';
 import { TextBig } from './CustomTexts';
 import CustomIcon from './CustomIcon';
-// import CustomIcon from '../CustomIcon';
-// import { TextBig } from '../CustomTexts';
-// import {useGeneral} from '../../utils/hooks/useGeneral';
 
 const CustomHeader = props => {
   const {title, type, onPressBack,onBack,menuIcon,style} = props;
   const navigation = useNavigation();
-  // const {user} = useGeneral();
   const onPress = () => {
     onPressBack();
-    // if (onPressBack) {
-    //     onPressBack()
-    //     return
-    // }
-
-    // if(user.type=='shifter'){
-    //     navigation.navigate('Home')
-    //     return
-    // }
-    // navigation.goBack()
   };
   const openDrawer = () => {
     navigation.dispatch(DrawerActions.openDrawer());

@@ -13,11 +13,9 @@ import { TextHuge } from '../Components/CustomTexts';
 import Fields from '../Components/Fields';
 import Wrapper from '../Components/Wrapper';
 import { COLORS } from '../utils/constants/theme';
-import CustomButton from '../Components/CustomButton';
 
 const Login = () => {
   const navigation = useNavigation();
-  // const {loginUser, onPressGoogleLogin} = useAuth();
 
   const [loading, setLoading] = useState(false);
   const [agreeToTerms, setAgreeToTerms] = useState(false)
@@ -36,6 +34,7 @@ const Login = () => {
 
   return (
     <Wrapper bottomBtn  paddingX title={'Send Code'} onPress={handleSubmit(onSubmit)}>
+      <View style={{height:heightPercentageToDP(6)}}  />
 
       <TextHuge bold textStyle={{ marginTop: heightPercentageToDP(2) }}>{"Let’s get you \n verified"}</TextHuge>
 
@@ -55,7 +54,6 @@ const Login = () => {
         />
       </View>
 
-    {/* <TextHuge bold textStyle={{ marginTop: heightPercentageToDP(2) }}>{"Let’s get you \n verified"}</TextHuge> */}
     </Wrapper>
 
   );

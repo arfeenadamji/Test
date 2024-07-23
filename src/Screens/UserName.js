@@ -2,16 +2,12 @@ import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { StyleSheet, View } from 'react-native';
-import Wrapper from '../Components/Wrapper';
-import CustomHeader from '../Components/Header';
-import Fields from '../Components/Fields';
-import { TextHuge } from '../Components/CustomTexts';
 import { heightPercentageToDP } from 'react-native-responsive-screen';
 import CustomButton from '../Components/CustomButton';
+import { TextHuge } from '../Components/CustomTexts';
+import Fields from '../Components/Fields';
+import Wrapper from '../Components/Wrapper';
 import { COLORS } from '../utils/constants/theme';
-// import Fields from '../../components/Fields';
-// import CustomHeader from '../../components/Header';
-// import Wrapper from '../../utils/Wrapper';
 
 const UserName = (props) => {
   const navigation = useNavigation();
@@ -51,7 +47,6 @@ const UserName = (props) => {
           onPress={handleSubmit(onSubmit)}
           title={'Great? Lets proceed'}
           textColor={COLORS.white}
-          // withColor={true}
           style={{marginTop:heightPercentageToDP(10)}}
           textStyle={{ textTransform: 'capitalize', letterSpacing: 0.8 }}
         />

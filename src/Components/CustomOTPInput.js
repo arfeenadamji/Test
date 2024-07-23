@@ -5,12 +5,8 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
-
-// import { TextSmall } from '../CustomTexts';
-// import { COLORS } from '../../utils/constants/theme';
-import { Controller, useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { TextSmall } from './CustomTexts';
-import { COLORS } from '../utils/constants/theme';
 
 const CustomOTPInput = props => {
   const { error, inputStyles, style, value,
@@ -59,9 +55,6 @@ const styles = StyleSheet.create({
     fontSize: wp(5),
     color:'white',
     fontWeight:'bold'
-    // backgroundColor: COLORS.textBackground,
-    // backgroundColor: 'red',
-    // color: COLORS.white,
   },
   containerStyle: {
     flexDirection: 'row',
